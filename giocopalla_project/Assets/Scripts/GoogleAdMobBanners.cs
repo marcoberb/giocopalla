@@ -18,7 +18,7 @@ public class GoogleAdMobBanners : MonoBehaviour
         this.appId = "unexpected_platform";
 
         if (Application.platform == RuntimePlatform.Android)
-            this.appId = SensibleData.testAppId;         
+            this.appId = SensibleData.androidAppId;         
 
         MobileAds.Initialize(this.appId);
 
@@ -27,8 +27,8 @@ public class GoogleAdMobBanners : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.Android)
         {
-            this.upperBannerId = SensibleData.testBannerId;
-            this.lowerBannerId = SensibleData.testBannerId;
+            this.upperBannerId = SensibleData.androidUpperBannerId;
+            this.lowerBannerId = SensibleData.androidLowerBannerId;
         }
 
         // Create a 320x50 banner at the top of the screen
