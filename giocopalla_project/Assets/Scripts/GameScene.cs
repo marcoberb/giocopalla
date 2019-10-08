@@ -41,6 +41,9 @@ public class GameScene : MonoBehaviour
 
         // retrieves "HighScore" from player preferences or zero
         this.HighScore = PlayerPrefs.GetInt("high_score", 0);
+
+        this.GoogleAdMobBanners.LoadBanners();
+        this.GoogleAdMobBanners.ShowBanners();
     }
 
     public void Update()
@@ -54,7 +57,7 @@ public class GameScene : MonoBehaviour
     {
         float screenWidth;
         float screenHeight;
-        float gameTime;
+        float gameTime = 0.46f;
 
         Debug.Log("width: " + Screen.width + " height: " + Screen.height + " dpi: " + Screen.dpi);
 
@@ -62,11 +65,11 @@ public class GameScene : MonoBehaviour
         {
             screenWidth = Screen.width / Screen.dpi;
             screenHeight = Screen.height / Screen.dpi;
-            gameTime = (Mathf.Sqrt(Mathf.Pow(screenWidth, 2) + Mathf.Pow(screenHeight, 2))) / 10f;
+            gameTime += (Mathf.Sqrt(Mathf.Pow(screenWidth, 2) + Mathf.Pow(screenHeight, 2))) / 100f;
         }
         else
         {
-            gameTime = 0.52f;
+            gameTime = 0.51f;
         }
 
         return gameTime;
