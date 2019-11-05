@@ -18,7 +18,7 @@ public class MenuScene : MonoBehaviour {
         this.CreditsPanel.SetActive(false);
         this.BackgroundHoverBlack.SetActive(false);
 
-        // high score loaded from player prefs. If there isn't one is set to 0
+        // retrieves "HighScore" from player preferences or zero
         this.HighScore.text = "HIGH SCORE: " + PlayerPrefs.GetInt("high_score", 0).ToString();
     }
 
@@ -34,11 +34,10 @@ public class MenuScene : MonoBehaviour {
         SceneManager.LoadScene("Game");
 	}
 
-    /* void ResetHighScore(): resets the high score to 0 */
-    public void ResetHighScore()
+    /* void ShowRanking(): show google play games "global leaderboard" */
+    public void ShowGlobalLeaderboard()
     {
-        PlayerPrefs.DeleteKey("high_score");
-        this.HighScore.text = "HIGH SCORE: " + PlayerPrefs.GetInt("high_score", 0).ToString();
+        PlayGamesController.ShowGlobalLeaderboard();
     }
 
     /* void QuitGame(): closes the app */

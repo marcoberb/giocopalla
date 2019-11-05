@@ -43,7 +43,7 @@ public class GameScene : MonoBehaviour
         this.HighScore = PlayerPrefs.GetInt("high_score", 0);
 
         this.GoogleAdMobBanners.LoadBanners();
-        this.GoogleAdMobBanners.ShowBanners();
+        //this.GoogleAdMobBanners.ShowBanners();
     }
 
     public void Update()
@@ -78,13 +78,16 @@ public class GameScene : MonoBehaviour
     /* void CheckHighScore(): loads and shows banners, then checks if player has made new high score and shows related panel */
     public void CheckHighScore()
     {
-        this.GoogleAdMobBanners.LoadBanners();
+        //this.GoogleAdMobBanners.LoadBanners();
         this.GoogleAdMobBanners.ShowBanners();
 
         if ( this.CurrentScore > this.HighScore )
         {
             PlayerPrefs.SetInt("high_score", this.CurrentScore);
             this.HighScore = PlayerPrefs.GetInt("high_score");
+
+            PlayGamesController.PostPlayerScoreToLeaderboard(this.HighScore);
+
             ShowNewHighScoreBox();
         }
         else
@@ -127,7 +130,7 @@ public class GameScene : MonoBehaviour
 
         this.DisplayedScoreText.gameObject.SetActive(true);
 
-        this.GoogleAdMobBanners.HideBanners();
+        this.GoogleAdMobBanners.LoadBanners();
 
         this.CurrentScore = 0;
     }
