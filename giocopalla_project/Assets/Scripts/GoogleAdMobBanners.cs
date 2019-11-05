@@ -44,7 +44,9 @@ public class GoogleAdMobBanners : MonoBehaviour
     public void LoadBanners()
     {
         this.upperBannerView.LoadAd(this.upperBannerRequest);
+        Debug.Log("upper banner view caricato");
         this.lowerBannerView.LoadAd(this.lowerBannerRequest);
+        Debug.Log("lower banner view caricato");
         this.HideBanners();
     }
 
@@ -53,12 +55,15 @@ public class GoogleAdMobBanners : MonoBehaviour
     {
         this.upperBannerView.Show();
         this.lowerBannerView.Show();
+        Debug.Log("banner mostrati");
     }
 
     /* void HideBanners(): hide the two banners */
     public void HideBanners()
     {
         this.upperBannerView.Hide();
+        Debug.Log("upper banner view nascosti");
         this.lowerBannerView.Hide();
+        Debug.Log("lower banner view nascosti");
     }
 }

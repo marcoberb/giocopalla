@@ -7,7 +7,7 @@ public class PointingArrow : MonoBehaviour
     {
         //for_testing PlayerPrefs.SetString("first_time", "true");
 
-        //from first run of app until user open "InfoPanel", pref will be !=false
+        //from first run of app until user open "InfoPanel", "first_time" pref will be !=false
         if ( PlayerPrefs.GetString("first_time").Equals("false") )
             this.gameObject.SetActive(false);
         else

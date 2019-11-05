@@ -43,6 +43,10 @@ Thumbs.db
 ###
 # myIgnore
 /giocopalla_project/[Aa]ssets/[Ss]cripts/Sensible*
+/giocopalla_project/[Aa]ssets/GoogleMobileAds/
+/giocopalla_project/[Aa]ssets/GooglePlayGames/
+/giocopalla_project/[Aa]ssets/PlayServicesResolver/
+/giocopalla_project/[Aa]ssets/Plugins/
 /giocopalla_project/*.keystore
 /giocopalla_project/.vs/
 /giocopalla_project/[Pp]ackages/
