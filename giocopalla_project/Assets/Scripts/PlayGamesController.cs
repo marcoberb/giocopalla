@@ -11,8 +11,11 @@ public class PlayGamesController : MonoBehaviour
 
     public void Start()
     {
-        this.MenuScene = this.MainCamera.GetComponent<MenuScene>();
-        this.AuthenticateUser();
+        if (!Social.localUser.authenticated)
+        {
+            this.MenuScene = this.MainCamera.GetComponent<MenuScene>();
+            this.AuthenticateUser();
+        }
     }
 
     private void AuthenticateUser()

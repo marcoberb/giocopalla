@@ -62,8 +62,8 @@ public class GoogleAdMobBanners : MonoBehaviour
     public void HideBanners()
     {
         this.upperBannerView.Hide();
-        Debug.Log("upper banner view nascosti");
+        Debug.Log("upper banner view nascosto");
         this.lowerBannerView.Hide();
-        Debug.Log("lower banner view nascosti");
+        Debug.Log("lower banner view nascosto");
     }
 }
