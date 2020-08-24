@@ -31,7 +31,7 @@ public class GoogleAdMobBanners : MonoBehaviour
             this.lowerBannerId = SensibleData.androidLowerBannerId;
         }
 
-        // Create a 320x50 banner at the top of the screen
+        // Create a 320x50 banner at the top and at the bottom of the screen
         this.upperBannerView = new BannerView(this.upperBannerId, AdSize.Banner, AdPosition.Top);
         this.lowerBannerView = new BannerView(this.lowerBannerId, AdSize.Banner, AdPosition.Bottom);
 

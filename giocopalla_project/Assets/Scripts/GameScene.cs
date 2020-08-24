@@ -53,7 +53,7 @@ public class GameScene : MonoBehaviour
     }
 
     /* float EstimateTimer(): determines game time based on dimensions of the screen */
-    private float EstimateTimer()   // TROVA UN ALGORITMO CHE CALCOLI IL TEMPO GIUSTO SU OGNI SCHERMO
+    private float EstimateTimer()   //TODO: TROVA UN ALGORITMO CHE CALCOLI IL TEMPO GIUSTO SU OGNI SCHERMO
     {
         float screenWidth;
         float screenHeight;
